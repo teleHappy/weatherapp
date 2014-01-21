@@ -1,8 +1,14 @@
+/*
+  Author : Rick Dillon
+*/
+
 //noinspection CssUnknownTarget
 @import "compass";
 
+$text-color : #fff;
+
 body{
-  color: #fff;
+  color: $text-color;
   font-size: 1.1em;
   font-family: 'Exo 2', sans-serif;
 }
@@ -38,8 +44,6 @@ nav {
   }
 }
 
-
-
 nav a {
   text-decoration: none;
   color: #fff;
@@ -53,10 +57,7 @@ nav a {
   left : 0;
   top: 44px;
   margin: 0 40px;
-  -webkit-transition:all 0.5s ease-in-out;
-  -moz-transition:all .05s ease-in-out;
-  -o-transition:all 0.5s ease-in-out;
-  transition:all 0.5s ease-in-out;
+  @include transition(all 0.5s ease-in-out);
 }
 ul#panelsContainer {
   list-style: none;
@@ -66,15 +67,13 @@ ul#panelsContainer {
   left: 0;
   width : 1080px;
   height: 426px;
-  -webkit-transition:all 0.5s ease-in-out;
-  -moz-transition:all .05s ease-in-out;
-  -o-transition:all 0.5s ease-in-out;
-  transition:all 0.5s ease-in-out;
-}
-ul#panelsContainer li {
-  float: left;
-  display: block;
-  background-color: rgba(51, 51, 51, .1);
+  @include transition(all 0.5s ease-in-out);
+
+  & li {
+    float: left;
+    display: block;
+    background-color: rgba(51, 51, 51, .1);
+  }
 }
 
 .panel {
@@ -127,29 +126,35 @@ ul#panelsContainer li {
   padding-bottom: .5em;
 }
 
-#forecast h3{
-  margin: 0;
-  text-align: right;
+#forecast {
+ & h3{
+   margin: 0;
+   text-align: right;
+ }
+  & p {
+    font-size: .8em;
+    margin: 0;
+    text-align: right;
+  }
 }
-#forecast p {
-  font-size: .8em;
-  margin: 0;
-  text-align: right;
-}
+
 #forecast table {
   width: 100%;
-}
-#forecast table td{
-  padding: 10px 12px;
-  height: 50px;
-}
-#forecast table td p.shortDate{
-  font-size: .6em;
-}
-#forecast table td.icon img{
-  width: 55%;
-  -webkit-transition:all 0.5s ease-in-out .2s;
-  -moz-transition:all .05s ease-in-out .2s;
-  -o-transition:all 0.5s ease-in-out .2s;
-  transition:all 0.5s ease-in-out .2s;
+
+  & td{
+    padding: 10px 12px;
+    height: 50px;
+
+    &{
+      padding: 10px 12px;
+      height: 50px;
+    & p.shortDate{
+      font-size: .6em;
+    }
+    &.icon img{
+      width: 55%;
+      @include transition(all 0.5s ease-in-out .2s);
+    }
+    }
+  }
 }
