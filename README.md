@@ -1,4 +1,4 @@
-# weatherapp
+# Weather Application
 
 SOA implementation of a mobile enabled Weather App using data from api.aerisapi.com
 
