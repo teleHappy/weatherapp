@@ -1,3 +1,12 @@
 # weatherapp
 
 SOA implementation of a weatherapp using data from api.aerisapi.com
+
+*   weather 'web-app' (can run in a browser)
+ *   Uses real weather service API
+ *   Uses one html file
+ *   Does not use pre-made UI components (except weather related sun/cloud/rain graphics)
+ *   Incorporates a 'weather forecast' UI that is separate from the 'current weather' UI and are not displayed at the same time
+ *   Touch compatible
+ *   Makes use of CSS3 transitions
+ *   Works in the latest versions of chrome & safari (iOS & OSX)
