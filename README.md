@@ -1,6 +1,6 @@
 # Weather Application
 
-SOA implementation of a mobile enabled Weather App using data from api.aerisapi.com
+SPA implementation of a mobile enabled Weather App using data from api.aerisapi.com
 
 *   Mobile designed HTML5 weather 'web-app' (runs in a browser)
 *   Uses real weather service API
